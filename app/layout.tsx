@@ -24,7 +24,7 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: "0xkai",
-  description: "Solana on-chain programs and Rust developer tooling.",
+  description: "Blockchain developer",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#f5efe5" },
     { media: "(prefers-color-scheme: dark)", color: "#121817" },

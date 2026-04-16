@@ -13,11 +13,10 @@ export default function Home() {
       <section className="w-full  mx-auto flex flex-col items-start gap-3.5 pt-8 px-5 md:pt-14 md:px-38.5">
         <Hero />
         <About />
-        <Experience />
         <ProofOfWork />
+        <Experience />
         <Achievements />
       </section>
-
       <main className="flex-1" />
       <Footer />
     </div>
