@@ -10,7 +10,7 @@ const projects = [
   {
     num: "01",
     name: "Orbital",
-    desc: "Spherical invariant CFMM in Solidity — generalizes AMMs to N-dimensional liquidity surfaces. Swap mechanics via invariant-preserving state transitions, LP mint/burn, fee distribution. Fuzz-tested with Foundry.",
+    desc: "Full implementation of Paradigm's Orbital paper — an N-dimensional CFMM where liquidity lives on a sphere surface, not a curve. Tick-based concentration for capital efficiency gains up to 15x in the 5-asset case. Solidity + Python, fuzz-tested with Foundry.",
     tag: "CFMM · Multi-asset pools · Solidity",
     stack: ["SOLIDITY", "PYTHON"],
     links: [{ label: "github", href: "https://github.com/Oxkai/orbital" }, { label: "paper", href: "https://www.paradigm.xyz/2025/06/orbital" }],

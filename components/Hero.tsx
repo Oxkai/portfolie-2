@@ -44,7 +44,7 @@ export default function Hero() {
             className="flex-1 text-[11px] leading-4.75 tracking-[1.1px] uppercase font-normal"
             style={{ fontFamily: mono, color: c.secondary }}
           >
-            Protocol Engineer — Roorkee, IN
+            Blockchain developer — Roorkee, IN
           </span>
         </div>
 
@@ -67,8 +67,7 @@ export default function Hero() {
               className="flex-1 text-[13px] leading-5.75 font-normal"
               style={{ fontFamily: mono, color: c.secondary }}
             >
-              Solana on-chain programs and Rust developer tooling. I also build education infrastructure that gets developers unstuck. Solana Foundation grantee. Superteam India Member.
-            </p>
+Interested in DeFi and blockchain infrastructure, with a strong focus on distributed systems, networking protocols, consensus mechanisms, and low-level stuff.            </p>
           </div>
 
           {/* Links */}

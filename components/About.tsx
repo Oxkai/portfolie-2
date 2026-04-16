@@ -35,14 +35,12 @@ export default function About() {
             className="w-full text-[13px] leading-6 font-normal"
             style={{ fontFamily: mono, color: c.secondary }}
           >
-            hey, i&apos;m ajay. deeply interested in blockchain and defi — i build protocols from the ground up, on-chain systems in solidity and rust, and products that ship to real users.
-          </p>
+Hey, I’m Ajay — a 3rd-year Mathematics and Computing undergraduate at IIT Roorkee, currently working as a blockchain developer at BlocSoc IITR.          </p>
           <p
             className="w-full text-[13px] leading-6 font-normal"
             style={{ fontFamily: mono, color: c.secondary }}
           >
-            obsessed with evm internals, defi primitives, and protocol design. bs-ms mathematics and computing at iit roorkee. core member at blocsoc iitr — won based india, ethindia, and ethglobal hackathons.
-          </p>
+Interested in networking protocols, distributed systems, and blockchain fundamentals with a focus on DeFi — exploring protocols, building, and learning through hackathons.          </p>
         </div>
       </div>
 
