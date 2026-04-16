@@ -1,0 +1,388 @@
+\documentclass[10pt,a4paper]{article}
+
+% ----------------------------------------------------------------------------------------
+% PACKAGES & SETUP
+% ----------------------------------------------------------------------------------------
+
+% ----------------------------------------------------------------------------------------
+% PACKAGES & SETUP
+% ----------------------------------------------------------------------------------------
+\usepackage[left=0.55in, right=0.55in, top=0.55in, bottom=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref} % hidelinks removes the boxes/colors around links
+
+
+% FONT CHANGE: Times New Roman
+\usepackage{charter}
+
+\usepackage{setspace}
+\setstretch{1.05}
+
+% Link Color Setup - Set to black to avoid "blur" or distracting colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
+
+% Remove Page Numbering
+\pagestyle{empty}
+
+% ----------------------------------------------------------------------------------------
+% SECTION FORMATTING
+% ----------------------------------------------------------------------------------------
+\titleformat{\section}
+  {\large\bfseries\raggedright}
+  {}{0em}                       
+  {}                           
+  [\titlerule]                 
+
+\titlespacing{\section}{0pt}{10pt}{6pt}
+\setlist[itemize]{
+    leftmargin=1.3em,
+    labelsep=0.5em,
+    itemsep=2pt,
+    topsep=3pt,
+    parsep=0pt,
+    label=\textbullet
+}
+
+% ----------------------------------------------------------------------------------------
+% CUSTOM COMMANDS
+% ----------------------------------------------------------------------------------------
+% Modified to put link behind the Title/Company
+\newcommand{\resumeEntry}[3]{
+  \noindent\textbf{#1} \hfill \textit{#2} \\   
+  \textit{#3} \vspace{-3pt}
+}
+
+\newcommand{\entryGap}{\vspace{5pt}}
+
+\begin{document}
+
+% ----------------------------------------------------------------------------------------
+% HEADER
+% ----------------------------------------------------------------------------------------
+\begin{center}
+    {\Large \textbf{Ajay Odedra}} \\[4pt]
+    \small 
+    \faPhone\ (+91) 9327381765 \quad
+    \faEnvelope\ \href{mailto:ajayodedra00000@gmail.com}{ajayodedra00000@gmail.com} \quad
+    \faLinkedin\ \href{https://www.linkedin.com/in/ajay-odedra-b26923283/}{linkedin.com/in/ajay-odedra} \quad
+    \faGithub\ \href{https://github.com/Oxkai}{github.com/Oxkai}
+\end{center}
+
+\vspace{-5pt}
+
+% ----------------------------------------------------------------------------------------
+% EDUCATION
+% ----------------------------------------------------------------------------------------
+\section{Education}
+
+\noindent\textbf{Indian Institute of Technology, Roorkee} \hfill Roorkee, India \\
+\textit{Bs Ms in Mathematics and Computing} \hfill \textit{Aug. 2023 -- May 2028}
+
+% ----------------------------------------------------------------------------------------
+% EXPERIENCE
+% ----------------------------------------------------------------------------------------
+\section{Experience}
+
+
+
+\resumeEntry{Full-Stack Engineer Intern}{Aug. 2025 -- Jan 2026}{\href{https://www.capx.ai/}{Capx}}
+
+\begin{itemize}
+    \item Led end-to-end development of fizzylabs.ai as the primary engineer using Next.js, Convex, and Gemini, designing the prompt-to-generation pipeline and real-time data flows.
+    \item Engineered n8n-based automation pipelines for marketing workflows, orchestrating cross-channel content distribution and reducing manual operations.
+    \item Implemented Solidity presale contracts deployed on mainnet, handling token distribution and on-chain payment logic.
+    \item Designed and deployed Solidity presale contracts on mainnet with secure token distribution and on-chain payment handling.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{Frontend Developer Intern}{Dec. 2025 -- Jan 2026}{\href{https://www.miracletrade.com/}{Miracle}}
+\begin{itemize}
+    \item Developed the frontend of a cross-platform trading application using React Native for Android \& iOS.
+    \item Implemented and shipped features for core trading workflows, focusing on performance and responsive user interactions.
+    \item Integrated backend APIs and WebSocket-based real-time data streams, ensuring consistent market data updates.
+    \item Managed client-side state synchronization under continuous data flow from live trading systems.
+    \item Built and maintained the company website, handling development, deployment, and iterative updates.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{Core Member}{March 2024 -- Present}{\href{https://blocsoc.iitr.ac.in/}{Blocsoc IITR}}
+\begin{itemize}
+    \item Developed blockchain applications and led product design for multiple web3 projects.
+    \item Won Based India 2024, Anon Aadhaar track at ETHIndia, and Arbitrum track at ETHGlobal hackathons.
+\end{itemize}
+
+% ----------------------------------------------------------------------------------------
+% PROJECTS
+% ----------------------------------------------------------------------------------------
+\section{Projects}
+
+\resumeEntry{\href{https://github.com/Oxkai/orbital}{Orbital -- Spherical AMM (Multi-Asset CFMM)}}{2025}{Solidity \& Python}
+\begin{itemize}
+    \item Implemented a spherical invariant CFMM in Solidity based on Paradigm’s Orbital design, generalizing AMMs to N-dimensional liquidity surfaces; designed swap mechanics via invariant-preserving state transitions ensuring deterministic pricing and bounded slippage.
+    
+    \item Engineered LP share mint/burn and fee distribution mechanisms preserving proportional ownership across dynamic multi-asset pools; modeled high-dimensional reserve geometry for improved capital efficiency and reduced slippage.
+
+    \item Developed invariant-based testing and fuzzing suites (Foundry) to validate correctness under adversarial trade sequences; built Python simulation frameworks to model pricing behavior and validate invariant dynamics.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{EVM from Scratch -- Ethereum Virtual Machine}{2024}{Rust}
+\begin{itemize}
+    \item Implemented an Ethereum Virtual Machine in Rust executing bytecode over stateful account models (balances, storage, contract code).
+    \item Supported 140 opcodes with instruction decoding, dispatch, and program counter semantics aligned with Ethereum execution flow.
+    \item Designed a stack-based execution engine handling arithmetic, memory, storage, and control-flow operations.
+    \item Modeled execution behavior consistent with the Ethereum Yellow Paper, including deterministic state transitions across transactions.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{\href{https://github.com/18aaddy/Agentic-Ethereum}{Colosseum -- On-Chain Agent Arena}}{2025}{Arbitrum Stylus, Rust ,React }
+\begin{itemize}
+    \item Built a trustless on-chain agent competition system with integrated betting using Arbitrum Stylus (Rust).
+    \item Implemented contracts for game state management, verifiable move validation, and deterministic payout settlement.
+    \item Enabled custom AI agent deployment, creating a programmable agent competition framework.
+    \item Designed system constraints for deterministic execution under on-chain environments.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{\href{https://www.fizzylabs.ai}{Fizzy -- AI Design Generation Platform}}{2025}{Next.js, Convex, Gemini, Stripe}
+\begin{itemize}
+    \item Built an AI platform (Next.js, Convex, Gemini) serving 8,000+ users for generating UI, logos, and visual assets.
+    \item Implemented an iterative prompt refinement pipeline improving multi-step generation quality.
+    \item Engineered real-time workflows (10--12s latency) using Convex for reactive data synchronization.
+    \item Integrated authentication and Stripe-based subscription \& webhook billing infrastructure.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{\href{https://apps.apple.com/in/app/miracle-trading-reimagined/id6757129362}{Miracle -- A trading Reimagined}}{2025}{React Native \& WebSockets}
+
+\begin{itemize}
+    \item Built the frontend of a cross-platform trading application using React Native (Android \& iOS).
+    \item Integrated backend APIs and WebSocket-based streaming for real-time market data updates.
+    \item Contributed to backend integration and data flow handling between client and trading services.
+    \item Managed client-side state synchronization under continuous data updates.
+\end{itemize}
+
+% ----------------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+% ----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0pt, label={}]
+    \item \textbf{Languages:} Solidity, Rust, TypeScript, Python, C++
+    \item \textbf{Frameworks \& Libraries:} Next.js, React.js, React Native, Express.js, ethers.js, Foundry
+    \item \textbf{Tools \& Platforms:} Git, Docker, Kubernetes, Convex, n8n, Figma, Framer, Spline, The Graph
+\end{itemize}
+
+% ----------------------------------------------------------------------------------------
+% ACHIEVEMENTS
+% ----------------------------------------------------------------------------------------
+\section{Achievements}
+\begin{itemize}
+    \item AIR 743 in JEE Advanced 2023
+    \item AIR 1115 in JEE mains 2023
+    \item Winner: Based India 2024
+    \item Anon Aadhaar track winner at ETHIndia 2024
+    \item Arbitrum track winner at ETHGlobal 2025
+\end{itemize}
+
+\end{document}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref} % hidelinks removes the boxes/colors around links
+
+
+% FONT CHANGE: Times New Roman
+\usepackage{charter}
+
+\usepackage{setspace}
+\setstretch{1.05}
+
+% Link Color Setup - Set to black to avoid "blur" or distracting colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
+
+% Remove Page Numbering
+\pagestyle{empty}
+
+% ----------------------------------------------------------------------------------------
+% SECTION FORMATTING
+% ----------------------------------------------------------------------------------------
+\titleformat{\section}
+  {\large\bfseries\raggedright}
+  {}{0em}                       
+  {}                           
+  [\titlerule]                 
+
+\titlespacing{\section}{0pt}{10pt}{6pt}
+\setlist[itemize]{
+    leftmargin=1.3em,
+    labelsep=0.5em,
+    itemsep=2pt,
+    topsep=3pt,
+    parsep=0pt,
+    label=\textbullet
+}
+
+% ----------------------------------------------------------------------------------------
+% CUSTOM COMMANDS
+% ----------------------------------------------------------------------------------------
+% Modified to put link behind the Title/Company
+\newcommand{\resumeEntry}[3]{
+  \noindent\textbf{#1} \hfill \textit{#2} \\   
+  \textit{#3} \vspace{-3pt}
+}
+
+\newcommand{\entryGap}{\vspace{5pt}}
+
+\begin{document}
+
+% ----------------------------------------------------------------------------------------
+% HEADER
+% ----------------------------------------------------------------------------------------
+\begin{center}
+    {\Large \textbf{Ajay Odedra}} \\[4pt]
+    \small 
+    \faPhone\ (+91) 9327381765 \quad
+    \faEnvelope\ \href{mailto:ajay_mo@ma.iitr.ac.in}{ajay\_mo@ma.iitr.ac.in} \quad
+    \faLinkedin\ \href{https://www.linkedin.com/in/ajay-odedra-b26923283/}{linkedin.com/in/ajay-odedra} \quad
+    \faGithub\ \href{https://github.com/Oxkai}{github.com/Oxkai}
+\end{center}
+
+\vspace{-5pt}
+
+% ----------------------------------------------------------------------------------------
+% EDUCATION
+% ----------------------------------------------------------------------------------------
+\section{Education}
+
+\noindent\textbf{Indian Institute of Technology, Roorkee} \hfill Roorkee, India \\
+\textit{Bs Ms in Mathematics and Computing} \hfill \textit{Aug. 2023 -- May 2028}
+
+% ----------------------------------------------------------------------------------------
+% EXPERIENCE
+% ----------------------------------------------------------------------------------------
+\section{Experience}
+
+
+
+\resumeEntry{Full-Stack Engineer Intern}{Aug. 2025 -- Jan 2026}{\href{https://www.capx.ai/}{Capx}}
+
+\begin{itemize}
+    \item Led end-to-end development of fizzylabs.ai as the primary engineer using Next.js, Convex, and Gemini, designing the prompt-to-generation pipeline and real-time data flows.
+    \item Engineered n8n-based automation pipelines for marketing workflows, orchestrating cross-channel content distribution and reducing manual operations.
+    \item Implemented Solidity presale contracts deployed on mainnet, handling token distribution and on-chain payment logic.
+    \item Designed system integrations across frontend, backend, and AI inference, addressing real-time synchronization challenges in generation workflows.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{Frontend Developer Intern}{Dec. 2025 -- Jan 2026}{\href{https://www.miracletrade.com/}{Miracle}}
+\begin{itemize}
+    \item Developed the frontend of a cross-platform trading application using React Native for Android \& iOS.
+    \item Implemented and shipped features for core trading workflows, focusing on performance and responsive user interactions.
+    \item Integrated backend APIs and WebSocket-based real-time data streams, ensuring consistent market data updates.
+    \item Managed client-side state synchronization under continuous data flow from live trading systems.
+    \item Built and maintained the company website, handling development, deployment, and iterative updates.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{Core Member}{March 2024 -- Present}{\href{https://blocsoc.iitr.ac.in/}{Blocsoc IITR}}
+\begin{itemize}
+    \item Developed blockchain applications and led product design for multiple web3 projects.
+    \item Won Based India 2024, Anon Aadhaar track at ETHIndia, and Arbitrum track at ETHGlobal hackathons.
+\end{itemize}
+
+% ----------------------------------------------------------------------------------------
+% PROJECTS
+% ----------------------------------------------------------------------------------------
+\section{Projects}
+
+\resumeEntry{Orbital -- Spherical AMM Implementation}{2025}{Solidity \& Python}
+\begin{itemize}
+    \item Implemented a spherical invariant AMM in Solidity based on Paradigm’s Orbital design, extending CFMMs to N-dimensional stablecoin liquidity pools.
+    \item Engineered swap execution via invariant-preserving state transitions under fixed-point arithmetic, ensuring deterministic pricing.
+    \item Designed LP share accounting (mint/burn) and fee mechanisms maintaining proportional ownership across multi-asset pool states.
+    \item Modeled high-dimensional reserve dynamics enabling low-slippage trades and improved capital efficiency; validated via Python simulations.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{EVM from Scratch -- Ethereum Virtual Machine}{2024}{Rust}
+\begin{itemize}
+    \item Implemented an Ethereum Virtual Machine in Rust executing bytecode over stateful account models (balances, contract code).
+    \item Supported 140+ opcodes with instruction decoding, dispatch, and program counter semantics.
+    \item Designed a stack-based execution engine for arithmetic, logical, and control-flow operations.
+    \item Modeled execution behavior consistent with the Ethereum specification.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{Colosseum -- On-Chain Agent Arena}{2025}{Arbitrum Stylus \& Rust}
+\begin{itemize}
+    \item Built a trustless on-chain agent competition system with integrated betting using Arbitrum Stylus (Rust).
+    \item Implemented contracts for game state management, verifiable move validation, and deterministic payout settlement.
+    \item Enabled custom AI agent deployment, creating a programmable agent competition framework.
+    \item Designed system constraints for deterministic execution under on-chain environments.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{Fizzy -- AI Design Generation Platform}{2025}{Next.js, Convex, Gemini, Stripe}
+\begin{itemize}
+    \item Built an AI platform (Next.js, Convex, Gemini) serving 8,000+ users for generating UI, logos, and visual assets.
+    \item Implemented an iterative prompt refinement pipeline improving multi-step generation quality.
+    \item Engineered real-time workflows (10--12s latency) using Convex for reactive data synchronization.
+    \item Integrated authentication and Stripe-based subscription \& webhook billing infrastructure.
+\end{itemize}
+
+\entryGap
+
+\resumeEntry{Miracle -- Real-Time Trading Client}{2025}{React Native \& WebSockets}
+\begin{itemize}
+    \item Built the frontend of a cross-platform trading application using React Native (Android \& iOS).
+    \item Integrated backend APIs and WebSocket-based streaming for real-time market data updates.
+    \item Contributed to backend integration and data flow handling between client and trading services.
+    \item Managed client-side state synchronization under continuous data updates.
+\end{itemize}
+
+% ----------------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+% ----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0pt, label={}]
+    \item \textbf{Languages:} JavaScript, TypeScript, Rust, Python, C++, Solidity
+    \item \textbf{Frameworks:} Next.js, React.js, React Native, Express.js, Convex, Foundry, ethers.js
+    \item \textbf{Tools:} Git, n8n, Figma, Framer, Spline, The Graph
+\end{itemize}
+
+% ----------------------------------------------------------------------------------------
+% ACHIEVEMENTS
+% ----------------------------------------------------------------------------------------
+\section{Achievements}
+\begin{itemize}
+    \item AIR 743 in JEE Advanced 2023
+    \item AIR 1115 in JEE mains 2023
+    \item Winner: Based India 2024
+    \item Anon Aadhaar track winner at ETHIndia 2024
+    \item Arbitrum track winner at ETHGlobal 2025
+\end{itemize}
+
+\end{document}
