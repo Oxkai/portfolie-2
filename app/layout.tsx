@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -25,6 +25,9 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: "0xkai",
   description: "Blockchain developer",
+};
+
+export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#f5efe5" },
     { media: "(prefers-color-scheme: dark)", color: "#121817" },
@@ -41,6 +44,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
+      <head>
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5efe5" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121817" />
+      </head>
       <body className="min-h-full flex flex-col">
         <LenisProvider>{children}</LenisProvider>
         <ThemeToggle />
